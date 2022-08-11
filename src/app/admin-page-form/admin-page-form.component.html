@@ -1,0 +1,151 @@
+<form method="post" enctype="multipart/form-data">
+  <div class="columns field">
+    <div class="column is-narrow">
+      <h1 class="title is-3">ADD NEW HOTEL DETAILS</h1>
+    </div>
+    <div class="column">
+      <a (click)="closeBatch()" class="close-modal">X</a>
+    </div>
+  </div>
+  <div class="field columns" style="margin-top: 10px ;">
+    <div class="column is-narrow">
+      <label for="hotel_name" class="label">HOTEL NAME:</label>
+    </div>
+    <div class="column">
+      <input type="text" name="hotel_name" id="hotel_name" class="input" [(ngModel)]="hotels.hotel_name" #hotelName="ngModel" required>
+    </div>
+  </div>
+  <div>
+    <label for="hotel_image" class="label">
+      HOTEL IMAGE: <input type="file" name="hotel_image" id="hotel_image" [(ngModel)]="hotels.hotel_image" class="input">
+    </label>
+  </div>
+  <h3 class="title is-4 is-underlined" style="margin-top:10px ;">LOCATION</h3>
+  <div class="columns field">
+    <div class="column is-narrow">
+      <label for="street_name" class="label">
+        STREET: <input type="text" name="street_name" id="street_name"  class="input" [(ngModel)]="hotels.street_name" #streetName="ngModel" required>
+      </label>
+    </div>
+    <div class="column">
+      <label for="city" class="label">
+        CITY/TOWN: <input type="text" name="city" id="city"  class="input" [(ngModel)]="hotels.city" #city="ngModel" required>
+      </label>
+    </div>
+    <div class="column">
+      <label for="state" class="label">
+        STATE: <input type="text" name="state" id="state" class="input" [(ngModel)]="hotels.state" #state="ngModel" required>
+      </label>
+    </div>
+  </div>
+  <div class="columns field">
+    <div class="column">
+      <label for="postal_address" class="label">
+        POSTAL ADDRESS: <input type="text" name="postal_address" id="postal_address" class="input" [(ngModel)]="hotels.postal_address" #postalAddress="ngModel" required>
+      </label>
+    </div>
+    <div class="column">
+      <label for="country" class="label">
+        COUNTRY: <input type="text" name="country" id="country" class="input" [(ngModel)]="hotels.country" #country="ngModel" required>
+      </label>
+    </div>
+  </div>
+  <h3 class="title is-4 is-centered is-underlined">AMENITIES</h3>
+  <div>
+    <div class="columns field">
+      <div class="column is-narrow">
+        <label for="item1" class="label">
+          Item Name: <input type="text" name="item1" id="item1" [(ngModel)]="hotels.features" #item1="ngModel">
+        </label>
+      </div>
+      <div class="column is-narrow">
+        <input type="file" id="img1" name="img1" accept="image/*" [(ngModel)]="amenities.item1" >
+      </div>
+    </div>
+    <div class="columns field">
+      <div class="column is-narrow">
+        <label for="item2" class="label">
+          Item Name: <input type="text" name="item2" id="item2">
+        </label>
+      </div>
+      <div class="column">
+        <input type="file" id="img2" name="img2" accept="image/*" [(ngModel)]="amenities.item2" #item2="ngModel">
+      </div>
+    </div>
+    <div class="columns field">
+      <div class="column is-narrow">
+        <label for="item3" class="label">
+          Item Name: <input type="text" name="item3" id="item3">
+        </label>
+      </div>
+      <div class="column">
+        <input type="file" id="img3" name="img3" accept="image/*" [(ngModel)]="amenities.item3" #item3="ngModel">
+      </div>
+    </div>
+    <div class="columns field">
+      <div class="column is-narrow">
+        <label for="item4" class="label">
+          Item Name: <input type="text" name="item4" id="item4">
+        </label>
+      </div>
+      <div class="column">
+        <input type="file" id="img4" name="img4" accept="image/*" [(ngModel)]="amenities.item4" #item4="ngModel">
+      </div>
+    </div>
+    <div class="columns field">
+      <div class="column is-narrow">
+        <label for="item5" class="label">
+          Item Name: <input type="text" name="item5" id="item">
+        </label>
+      </div>
+      <div class="column">
+        <input type="file" id="img5" name="img5" accept="image/*" [(ngModel)]="amenities.item5" #item5="ngModel">
+      </div>
+    </div>
+    <div class="columns field">
+      <div class="column is-narrow">
+        <label for="item1" class="label">
+          Item Name: <input type="text" name="item6" id="item6">
+        </label>
+      </div>
+      <div class="column">
+        <input type="file" id="img6" name="img6" accept="image/*" [(ngModel)]="amenities.item6" #item6="ngModel">
+      </div>
+    </div>
+    <div class="columns field">
+      <div class="column is-narrow">
+        <label for="item7" class="label">
+          Item Name: <input type="text" name="item7" id="item7">
+        </label>
+      </div>
+      <div class="column">
+        <input type="file" id="img7" name="img7" accept="image/*" [(ngModel)]="amenities.item7" #item7="ngModel">
+      </div>
+    </div>
+  </div>
+  <h3 class="title is-4 is-centered is-underlined" style="margin-top:25px ;">ROOMS</h3>
+  <div class="columns field">
+    <div class="column is-narrow">
+      <label for="item1" class="label">
+        Room Type: <input type="text" name="room_type" id="room_type" [(ngModel)]="hotels.room_type">
+      </label>
+    </div>
+    <div class="column">
+      <input type="file" id="img6" name="img6" accept="image/*" [(ngModel)]="hotels.room_type" >
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <p class="control">
+      <button (click)="save()" class="button is-success">Ok</button>
+    </p>
+    <p class="control">
+      <button (click)="resetform()" class="button is-warning">Clear</button>
+    </p>
+    <p class="control">
+      <a (click)="closeBatch()" class="button is-danger" style="width: 75px;">
+      Close
+      </a>
+    </p>
+  </div>
+
+</form>

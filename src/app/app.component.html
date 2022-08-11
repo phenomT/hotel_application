@@ -1,0 +1,170 @@
+
+<div class="container" *ngIf="showOtherComponent">
+  <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="dropdown navigation">
+    <div class="navbar-brand">
+      <a href="#" class="navbar-item">
+        <h1 class="is-size-2 logo">HOTEL SEARCH</h1>
+      </a>
+    </div>
+  </nav>
+  <div class="columns search-element is-centered">
+    <div class="column is-narrow">
+      <label for="search-item" class="label">Search</label>
+      <div class="select">
+        <select name="search-item" id="search-item" class="select" [(ngModel)]="hotels.item">
+          <option value="name">NAME</option>
+          <option value="price">PRICE</option>
+          <option value="amenities">AMENITIES</option>
+          <option value="bed_sizes">BED SIZES</option>
+        </select>
+      </div>
+    </div>
+    <div class="column is-three-fifths">
+      <label for="search-query" class="label"> For </label>
+      <div class="control">
+        <input type="text" name="search-query" id="search-query" class="input" placeholder="search item"[(ngModel)]="hotels.query">
+      </div>
+    </div>
+    <div class="column is-narrow">
+      <p class="control" style="margin-top: 32px ;">
+        <button (click)="search()" class="button is-success">
+          Search
+        </button>
+      </p>
+    </div>
+  </div>
+  <div class="section has-text-centered" style="margin-top:50px; overflow-x: auto;">
+    <div *ngFor="let hotel of results ">
+      <div class="card" style="margin-right:20px ;">
+        <div class="card-content">
+          <h3 class="title is-3"> {{hotel.hotel_name}} </h3>
+          <h5 class="title is-5"> {{hotel.location}} </h5>
+          <div class="card-image">
+            <figure class="image is-96*96">
+              <img *ngIf="hotel.hotel_name=='XELA HOTEL AND RESORT'" src="assets/images/xela.jpg" alt="XELA HOTELS AND RESORTS">
+              <img *ngIf="hotel.hotel_name=='hotel de source'" src="assets/images/desource.jpeg" alt="Hotel De Source">
+              <img *ngIf="hotel.hotel_name=='hotel de treasure'" src="assets/images/treasureHotel2.jpg" alt="Hotel De Treasure">
+              <img *ngIf="hotel.hotel_name=='cameron hotels'" src="assets/images/cameron.jpg" alt="Cameron Hotel">
+              <img *ngIf="hotel.hotel_name=='quantumm hotel and suites'" src="assets/images/quantumm.png" alt="Cameron Hotel">
+              <img *ngIf="hotel.hotel_name=='celebrations hotel'" src="assets/images/celebration.jpg" alt="Celebration Hotel">
+              <img *ngIf="hotel.hotel_name=='Mayfair Hotels'" src="assets/images/xelaNew.jpg" alt="Celebration Hotel">
+              <img *ngIf="hotel.hotel_name=='glory suites'" src="assets/images/glory.png" alt="Glory Hotel">
+              <img *ngIf="hotel.hotel_name=='hill spring hotel'" src="assets/images/hillspring.png" alt="Hill Spring Hotel">
+              <img *ngIf="hotel.hotel_name=='havard continental hotel'" src="assets/images/havard.jpeg" alt="Hill Spring Hotel">
+            </figure>
+          </div>
+          <div class="media">
+            <div *ngIf="hotel.hotel_name=='XELA HOTEL AND RESORT'" class="media-left">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/pool.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='XELA HOTEL AND RESORT'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/gym.png" alt="Gym">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='XELA HOTEL AND RESORT'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/largebed.png" alt="Executive room">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='XELA HOTEL AND RESORT'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/xela.jpg" alt="Executive room">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='hotel de source'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/swimming.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='hotel de source'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/restaurant.png" alt="Restaurant">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='hotel de source'">
+              <figure class="image is-48*48 amenities">
+                <img  src="assets/images/largebed2.png" alt="Executive royal">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='hotel de source'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/gym.png" alt="gym">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='quantumm hotel and suites'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/swimming.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='quantumm hotel and suites'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/largebed.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='quantumm hotel and suites'">
+              <figure class="image is-48*48 amenities">
+                <img  src="assets/images/fawzy.jpg" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='quantumm hotel and suites'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/pool2.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='hotel de treasure'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/pool.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='hotel de treasure'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/mediumbed.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='hotel de treasure'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/gym.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='hotel de treasure'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/restaurant.png" alt="swimming pool">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='cameron hotels'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/hall.png" alt="Hall">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='cameron hotels'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/gym.png" alt="Hall">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='cameron hotels'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/mediumbed3.png" alt="Hall">
+              </figure>
+            </div>
+            <div class="media-left" *ngIf="hotel.hotel_name=='cameron hotels'">
+              <figure class="image is-48*48 amenities">
+                <img src="assets/images/pool.png" alt="Hall">
+              </figure>
+            </div>
+          </div>
+          <div class="content">
+            <p> <strong>Amenities</strong>: {{hotel.amenities}} </p>
+            <p *ngIf="hotel.room_type">
+              <b>Room Type:</b> {{hotel.room_type}} , <b>Price:</b> {{hotel.price}}, <b>Bed Size:</b> {{hotel.bed_size}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+

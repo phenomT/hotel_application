@@ -1,0 +1,230 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+tr{
+    cursor: pointer;
+}
+.row-select {
+    background-color: rgba(31, 62, 92, 0.75) !important;
+}
+
+tr.row-select:hover{
+    background-color: rgba(31, 62, 92, 0.75) !important;
+}
+
+fieldset {
+    margin: 8px !important;
+    border: 1px solid rgb(43, 36, 36) !important;
+    padding: 8px 8px 15px 8px !important;
+    border-radius: 4px;
+}
+
+.no-border{
+    border: none !important;
+}
+
+legend {
+    padding: 2px;
+    font-weight: bolder;
+}
+
+.edit-mode{
+    background-color: rgba(126, 119, 119, 0.40) !important;
+    cursor: not-allowed;
+}
+
+.tabs {
+    width: 180px;
+    background-color: rgba(56, 57, 58, 0.40);
+    padding:0px;
+}
+
+.tabs ul {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 180px;
+    border-style: none !important;
+    border-width: 0px !important;
+}
+
+
+.tabs a{
+    align-items: flex-start !important;
+    justify-content: left !important;
+}
+
+.tabs li.is-active a{
+    font-weight: bolder;
+    background-color: #fff;
+    color: rgb(69, 69, 129);
+    border-color: #fff !important;
+    border-radius: 5px 0px 0px 5px !important;
+}
+
+.tabs a{
+    text-decoration: none !important;
+    border-style: none !important;
+    border-width: 0px !important;
+}
+.field>.column {
+    margin: 0px 5px !important;
+    padding: 2px 5px !important;
+}
+
+.tabs li{
+    width: 230px;
+}
+.tabs li+li {
+    margin-left: 0;
+}
+
+.tab{
+    overflow: hidden;
+    background-color: rgba(56, 57, 58, 0.40);
+    width: 100%;
+}
+
+.tab a {
+    text-decoration: none !important;
+    border-style: none !important;
+    border-width: 0px !important;
+    color: azure;
+    align-items: flex-start !important;
+    justify-content: left !important;
+
+
+}
+
+.tab span a.is-active {
+    font-weight: bolder;
+    background-color: #fff;
+    color: rgb(69, 69, 129);
+    border-color: #fff !important;
+    border-radius: 5px 0px 0px 5px !important;
+}
+
+fieldset.inline {
+    display: inline;
+    float: left;
+    margin-left: 0px;
+    padding: 0px;
+    size: 9px;
+}
+
+.tab-menu a:hover {
+    border: 1px solid;
+    background-color:rgb(42, 201, 42);
+}
+
+.tab-menu a:active {
+    font-weight: bolder;
+    background-color: #fff;
+    color: rgb(69, 69, 129);
+    border-color: #fff !important;
+    border-radius: 5px 0px 0px 5px !important;
+}
+
+.tab span {
+    padding: 10px;
+    border: 1px ridge;
+
+}
+
+.buttonwrapper{
+    display: inline-block;
+}
+
+.exchange {
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.button-inline {
+    margin-left: -10%;
+    border: none;
+    background-color: transparent;
+    font-size: 2px;
+}
+
+.button-left {
+    float: left;
+}
+
+.button-right {
+    float: right;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+#styled-select {
+    width: 210px;
+    height: 34px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    margin:auto;
+    border-radius:6px;
+}
+.warning{
+    color: red;
+}
+
+.postButton {
+  border: none;
+  background-color: white;
+  color:  hsl(217, 71%, 53%),
+}
+
+.cdk-overlay-pane.my-dialog {
+  position: relative!important;
+}
+.print.close.mat-button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+}
+
+.close:hover {
+  transform: rotate(180deg);
+}
+
+.top-bar-item {
+  margin-right: 25px;
+}
+
+.admin {
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+  background-color: deepskyblue;
+}
+
+.close-modal {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 1.5em;
+  color: orange;
+  font-weight: 800;
+}
+
+.close-modal:hover {
+  color: red;
+}
